@@ -1,22 +1,18 @@
 import com.example.Feline;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-//@RunWith(MockitoJUnitRunner.class)
+
 public class FelineTest {
 
         //тестируем метод eatMeat
     @Test
     public void eatMeatFelineClassTest() throws Exception {
         Feline feline = new Feline();
-        //Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+
         List<String> actualResult = feline.eatMeat();
         List<String> expectedResult = List.of("Животные", "Птицы", "Рыба");
 
@@ -37,7 +33,7 @@ public class FelineTest {
     @Test
     public void getKittensFelineClassTest(){
         Feline feline = new Feline();
-        //Mockito.when(feline.getKittens(1)).thenReturn(1);
+
         int actualResult = feline.getKittens();
         int expectedResult = 1;
 
