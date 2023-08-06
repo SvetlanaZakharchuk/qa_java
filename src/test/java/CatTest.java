@@ -7,7 +7,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 public class CatTest {
-
+    //тестируем метод getSound()
     @Test
     public void getSoundCatClassTest() {
         Feline feline = new Feline();
@@ -18,9 +18,9 @@ public class CatTest {
 
         assertEquals(expectedResult, actualResult);
     }
-    //в этом тесте используем мок, так как в методе getFood вызывается метод eatMeat()
+    //тестируем метод getFood()
     @Test
-    public void getFoodTest() throws Exception {
+    public void getFoodCatClassTest() throws Exception {
         Feline feline = new Feline();
         Cat cat = new Cat(feline);
 

@@ -7,7 +7,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 public class LionAlexTest {
-
+    //тестируем метод getFriends()
     @Test
     public void getFrinedsLionAlexClassTest() throws Exception {
         Feline feline = new Feline();
@@ -17,7 +17,7 @@ public class LionAlexTest {
 
         assertEquals(expectedResult, actualResult);
     }
-
+    //тестируем метод getPlaceOfLiving()
     @Test
     public void getPlaceOfLivingLionAlexClassTest() throws Exception {
         Feline feline = new Feline();
@@ -28,7 +28,7 @@ public class LionAlexTest {
         assertEquals(expectedResult, actualResult);
 
     }
-
+    //тестируем метод getKittens()
     @Test
     public void getKittensLionAlexClassTest() throws Exception {
         Feline feline = new Feline();

@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class FelineTest {
 
-        //тестируем метод eatMeat
+        //тестируем метод eatMeat()
     @Test
     public void eatMeatFelineClassTest() throws Exception {
         Feline feline = new Feline();
@@ -29,7 +29,7 @@ public class FelineTest {
        assertEquals(expectedResult, actualResult);
     }
 
-    //проверяем методод getKittens(), используем мок, так как в методе getKittens() вызывается еще один метод с параметром
+   //тестируем метод getKittens() без параметров
     @Test
     public void getKittensFelineClassTest(){
         Feline feline = new Feline();
@@ -40,7 +40,7 @@ public class FelineTest {
         assertEquals(expectedResult, actualResult);
     }
 
-    //проверяем метод getKittens(int kittensCount)
+    //проверяем метод getKittens(int kittensCount) с параметрами
     @Test
     public void getKittensFelineClassWithArgumentTest(){
         Feline feline = new Feline();

@@ -16,6 +16,7 @@ public class LionTest {
 
     @Mock
     Feline feline;
+    //тестируем метод getKittens()
     @Test
     public void getKittensLionClassTest() throws Exception {
 
