@@ -1,2 +1,56 @@
-package PACKAGE_NAME;public class FelineTest {
+import com.example.Feline;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
+
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+
+//@RunWith(MockitoJUnitRunner.class)
+public class FelineTest {
+
+        //тестируем метод eatMeat
+    @Test
+    public void eatMeatFelineClassTest() throws Exception {
+        Feline feline = new Feline();
+        //Mockito.when(feline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+        List<String> actualResult = feline.eatMeat();
+        List<String> expectedResult = List.of("Животные", "Птицы", "Рыба");
+
+        assertEquals(expectedResult, actualResult);
+    }
+
+    // метод getFamily()
+    @Test
+    public void getFamilyFelineClassTest(){
+        Feline feline = new Feline();
+        String actualResult = feline.getFamily();
+        String expectedResult = "Кошачьи";
+
+       assertEquals(expectedResult, actualResult);
+    }
+
+    //проверяем методод getKittens(), используем мок, так как в методе getKittens() вызывается еще один метод с параметром
+    @Test
+    public void getKittensFelineClassTest(){
+        Feline feline = new Feline();
+        //Mockito.when(feline.getKittens(1)).thenReturn(1);
+        int actualResult = feline.getKittens();
+        int expectedResult = 1;
+
+        assertEquals(expectedResult, actualResult);
+    }
+
+    //проверяем метод getKittens(int kittensCount)
+    @Test
+    public void getKittensFelineClassWithArgumentTest(){
+        Feline feline = new Feline();
+        Integer actualResult = feline.getKittens(4);
+        Integer expectedResult = 4;
+
+        assertEquals(expectedResult,actualResult);
+     }
 }
