@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class FelineTest {
 
-        //тестируем метод eatMeat()
+    //тестируем метод eatMeat()
     @Test
     public void eatMeatFelineClassTest() throws Exception {
         Feline feline = new Feline();
@@ -21,17 +21,17 @@ public class FelineTest {
 
     // метод getFamily()
     @Test
-    public void getFamilyFelineClassTest(){
+    public void getFamilyFelineClassTest() {
         Feline feline = new Feline();
         String actualResult = feline.getFamily();
         String expectedResult = "Кошачьи";
 
-       assertEquals(expectedResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
-   //тестируем метод getKittens() без параметров
+    //тестируем метод getKittens() без параметров
     @Test
-    public void getKittensFelineClassTest(){
+    public void getKittensFelineClassTest() {
         Feline feline = new Feline();
 
         int actualResult = feline.getKittens();
@@ -42,11 +42,11 @@ public class FelineTest {
 
     //проверяем метод getKittens(int kittensCount) с параметрами
     @Test
-    public void getKittensFelineClassWithArgumentTest(){
+    public void getKittensFelineClassWithArgumentTest() {
         Feline feline = new Feline();
         Integer actualResult = feline.getKittens(4);
         Integer expectedResult = 4;
 
-        assertEquals(expectedResult,actualResult);
-     }
+        assertEquals(expectedResult, actualResult);
+    }
 }

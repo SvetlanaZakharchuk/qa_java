@@ -17,6 +17,7 @@ public class LionAlexTest {
 
         assertEquals(expectedResult, actualResult);
     }
+
     //тестируем метод getPlaceOfLiving()
     @Test
     public void getPlaceOfLivingLionAlexClassTest() throws Exception {
@@ -28,6 +29,7 @@ public class LionAlexTest {
         assertEquals(expectedResult, actualResult);
 
     }
+
     //тестируем метод getKittens()
     @Test
     public void getKittensLionAlexClassTest() throws Exception {

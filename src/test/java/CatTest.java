@@ -18,6 +18,7 @@ public class CatTest {
 
         assertEquals(expectedResult, actualResult);
     }
+
     //тестируем метод getFood()
     @Test
     public void getFoodCatClassTest() throws Exception {
@@ -28,6 +29,6 @@ public class CatTest {
         List<String> actualResult = cat.getFood();
         List<String> expectedResult = List.of("Животные", "Птицы", "Рыба");
 
-       assertEquals(expectedResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 }

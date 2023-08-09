@@ -23,17 +23,17 @@ public class LionParamTest {
     @Mock
     Feline feline;
 
+    @Parameterized.Parameters(name = "Lion {0}  have mane {1}")
+    public static Object[][] params() {
+        return new Object[][]{
+                {"Самка", false},
+                {"Самец", true},
+        };
+    }
+
     @Before
     public void setUp() {
         MockitoAnnotations.openMocks(this);
-    }
-
-    @Parameterized.Parameters(name = "Lion {0}  have mane {1}")
-    public static Object[][] params() {
-        return new Object[][] {
-                { "Самка", false},
-                { "Самец", true},
-        };
     }
 
     //в этом тесте используем параметры sex и hasMane
@@ -47,6 +47,7 @@ public class LionParamTest {
 
         assertEquals(expectedResult, actualResult);
     }
+
     //в тестировании метода используем параметр sex
     @Test
     public void getFoodLionClassParamTest() throws Exception {

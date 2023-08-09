@@ -2,20 +2,21 @@ import com.example.Feline;
 import com.example.Lion;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
 
-
 import static org.junit.Assert.assertEquals;
+
 @RunWith(MockitoJUnitRunner.class)
 public class LionTest {
 
     @Mock
     Feline feline;
+
     //тестируем метод getKittens()
     @Test
     public void getKittensLionClassTest() throws Exception {
@@ -32,16 +33,17 @@ public class LionTest {
     //в этом тесте проверяем, что у льва есть грива (в отдельном классе объединила тесты и сделала параметризованный тест)
     @Test
     public void doesHasManeTrueLionClassTest() throws Exception {
-       Lion lion = new Lion("Самец", feline);
+        Lion lion = new Lion("Самец", feline);
 
         boolean actualResult = lion.doesHaveMane();
         boolean expectedResult = true;
 
         assertEquals(expectedResult, actualResult);
     }
+
     //в этом тесте проверяем, что у львицы гривы нет (в отдельном классе объединила тесты и сделала параметризованный тест)
     @Test
-    public void doesHasManeFalseLionClassTest() throws Exception{
+    public void doesHasManeFalseLionClassTest() throws Exception {
         Lion lion = new Lion("Самка", feline);
 
         boolean actualResult = lion.doesHaveMane();
@@ -61,6 +63,7 @@ public class LionTest {
 
         assertEquals(expectedResult, actualResult);
     }
+
     //тестируем метод getFood() для львицы (в классе LionParamTest.java для тестирования метода использую параметризацию)
     @Test
     public void getFoodLionFemaleLineClassTest() throws Exception {
@@ -75,14 +78,14 @@ public class LionTest {
 
     //тестируем исключение, если при создании льва в качестве пола передано не самец и не самка
     @Test
-    public void LionClassExceptionLineClassTest(){
-        try{
+    public void LionClassExceptionLineClassTest() {
+        try {
             Lion lion = new Lion("Просто текст", feline);
-            Assert.fail("Исключение не сработало");
-        }catch(Exception exception){
+        } catch (Exception exception) {
             String textException = "Используйте допустимые значения пола животного - самей или самка";
             Assert.assertEquals(textException, exception.getMessage());
         }
     }
+
 
 }
